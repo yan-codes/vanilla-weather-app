@@ -10,6 +10,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -18,10 +19,10 @@
       <div class="weather-app-wrap">
         <div class="weather-app">
           <div class="overview">
-            <h1>Caloocan</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Monday 11:50</li>
-              <li>Cloudy</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -40,9 +41,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>preci</li>
-                <li>humid</li>
-                <li>wind</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
