@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let description = document.querySelector("#description");
@@ -30,6 +29,8 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemp = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -60,10 +61,26 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-let apiKey = "5fbf29be988a6f0d497691f9466d6598";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Manila&appid=${apiKey}&units=metric`;
+function displayFahrenheit(event) {
+    event.preventDefault();
+    let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32);
+    let temperatureELement = document.querySelector("#temperature");
+    temperatureELement.innerHTML = Math.round(fahrenheitTemp)
+}
+function displayCelsius(event) {
+    event.preventDefault();
+    let temperatureELement = document.querySelector("#temperature");
+    temperatureELement.innerHTML = Math.round(celsiusTemp);
 
-axios.get(apiUrl).then(displayTemperature);
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
+
+
