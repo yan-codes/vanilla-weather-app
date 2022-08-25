@@ -62,16 +62,15 @@ function handleSubmit(event) {
 }
 
 function displayFahrenheit(event) {
-    event.preventDefault();
-    let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32);
-    let temperatureELement = document.querySelector("#temperature");
-    temperatureELement.innerHTML = Math.round(fahrenheitTemp)
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 function displayCelsius(event) {
-    event.preventDefault();
-    let temperatureELement = document.querySelector("#temperature");
-    temperatureELement.innerHTML = Math.round(celsiusTemp);
-
+  event.preventDefault();
+  let temperatureELement = document.querySelector("#temperature");
+  temperatureELement.innerHTML = Math.round(celsiusTemp);
 }
 
 let form = document.querySelector("#search-form");
@@ -83,4 +82,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
-
+search("Manila");
