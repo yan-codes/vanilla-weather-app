@@ -33,6 +33,7 @@ function displayTemperature(response) {
   celsiusTemp = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemp);
+  changeBackgroundImage();
   cityElement.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -52,9 +53,9 @@ function changeBackgroundImage() {
   if (celsiusTemp > 20) {
     document.querySelector(
       ".weather-app"
-    ).style.backgroundImage = `url("C:\Users\johnp\OneDrive\Desktop\dian\work\SheCodes\weather-app\images\warm.png")`;
+    ).style.backgroundImage = `url("./images/warm.png")`;
   } else {
-    document.body.style.backgroundImage = `url("C:\Users\johnp\OneDrive\Desktop\dian\work\SheCodes\weather-app\images\cool.png");
+    document.body.style.backgroundImage = `url("./images/cool.png")`;
   }
 }
 
