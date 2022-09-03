@@ -48,6 +48,16 @@ function displayTemperature(response) {
   );
 }
 
+function changeBackgroundImage() {
+  if (celsiusTemp > 20) {
+    document.querySelector(
+      ".weather-app"
+    ).style.backgroundImage = `url("C:\Users\johnp\OneDrive\Desktop\dian\work\SheCodes\weather-app\images\warm.png")`;
+  } else {
+    document.body.style.backgroundImage = `url("C:\Users\johnp\OneDrive\Desktop\dian\work\SheCodes\weather-app\images\cool.png");
+  }
+}
+
 function search(city) {
   let apiKey = "5fbf29be988a6f0d497691f9466d6598";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
