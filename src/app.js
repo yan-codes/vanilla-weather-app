@@ -50,12 +50,15 @@ function displayTemperature(response) {
 }
 
 function changeBackgroundImage() {
+  console.log("DHD", celsiusTemp);
   if (celsiusTemp > 20) {
     document.querySelector(
       ".weather-app"
     ).style.backgroundImage = `url("./images/warm.png")`;
   } else {
-    document.body.style.backgroundImage = `url("./images/cool.png")`;
+    document.querySelector(
+      ".weather-app"
+    ).style.backgroundImage = `url("./images/cool.png")`;
   }
 }
 

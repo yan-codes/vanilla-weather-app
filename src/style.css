@@ -3,7 +3,6 @@ body {
 }
 
 h1 {
-  color: #878787;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -13,7 +12,6 @@ h1 {
 ul {
   margin: 0;
   padding: 0;
-  color: #878787;
 }
 
 li {
