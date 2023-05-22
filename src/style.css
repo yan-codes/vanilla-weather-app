@@ -129,7 +129,7 @@ form {
   padding: 0;
 }
 
-@media (min-width: 300px) {
+@media (max-width: 500px) {
   .btn {
     font-size: 14px;
   }
