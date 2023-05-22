@@ -6,7 +6,7 @@ h1 {
   font-size: 80px;
   font-weight: 500;
   line-height: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: rgb(17, 1, 106);
 }
 
@@ -53,10 +53,6 @@ form {
   border: 5px solid rgb(17, 1, 106);
   border-radius: 15px;
   background-color: rgb(253, 253, 223);
-}
-
-.weather-info {
-  margin-top: 20px;
 }
 
 .weather-temperature img {
@@ -130,11 +126,19 @@ form {
 }
 
 @media (max-width: 500px) {
-  .btn {
-    font-size: 14px;
+  h1 {
+    font-size: 70px;
   }
 
   li {
+    font-size: 14px;
+  }
+
+  .weather-info .row {
+    justify-content: space-evenly;
+  }
+
+  .btn {
     font-size: 14px;
   }
 }
