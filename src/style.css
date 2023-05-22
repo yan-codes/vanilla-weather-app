@@ -3,10 +3,11 @@ body {
 }
 
 h1 {
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 80px;
+  font-weight: 500;
   line-height: 28px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  color: rgb(17, 1, 106);
 }
 
 ul {
@@ -18,9 +19,11 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 100px;
   line-height: 19px;
+  opacity: 0.7;
+  line-height: 30px;
 }
 
 li:first-letter {
@@ -29,58 +32,92 @@ li:first-letter {
 
 a {
   text-decoration: none;
+  color: rgb(229, 6, 129);
+}
+
+form {
+  padding-bottom: 30px;
+}
+
+.current-info {
+  color: rgb(229, 6, 129);
 }
 
 .weather-app-wrap {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 100%;
+}
+
+.container {
+  padding: 120px 50px 180px;
+  max-width: 800px;
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid;
-  border-radius: 7px;
+  padding: 40px;
+  border: 5px solid rgb(17, 1, 106);
+  border-radius: 15px;
+  background-color: rgb(253, 253, 223);
 }
 
-.overview {
-  margin-bottom: 20px;
+.weather-info {
+  margin-top: 20px;
 }
 
 .weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  margin-right: -8px;
+  height: 155px;
+  width: 155px;
+  position: relative;
+  margin-top: -37px;
+}
+
+.form-control,
+.btn {
+  height: 50px;
+  font-size: 18px;
+}
+
+.btn {
+  background: rgb(17, 1, 106);
+  border-radius: 15px;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+  background: rgb(17, 1, 106);
+}
+
+.col-6 {
+  padding-left: 23px;
+  padding-right: 0;
 }
 
 .weather-temperature strong {
-  font-size: 64px;
-  font-weight: 400;
+  font-size: 80px;
+  font-weight: 500;
   line-height: 1;
+  color: rgb(17, 1, 106);
 }
 
 .weather-temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
-}
-
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
+  font-size: 30px;
+  margin-left: -4px;
+  color: rgb(17, 1, 106);
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin: 20px auto;
+  padding: 20px 20px;
+  text-align: center;
+  background-color: rgb(11, 0, 73);
+  opacity: 0.8;
+  border-radius: 10px;
   text-align: center;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.6;
+  font-size: 15px;
+  color: rgb(242, 249, 247);
 }
 
 .weather-forecast-temperature-min {
@@ -88,5 +125,10 @@ a {
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 16px;
+  color: rgb(242, 249, 247);
+}
+
+.weather-forecast .col {
+  padding: 0;
 }
